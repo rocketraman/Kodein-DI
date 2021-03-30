@@ -37,6 +37,7 @@ framework("tfx").include(
         ":framework:tornadofx:kodein-di-framework-tornadofx-jvm"
 )
 
-framework("compose").include(
-        ":framework:compose:kodein-di-framework-compose"
-)
+// TODO no Compose Compiler compatible with 1.5.0-M2
+// framework("compose").include(
+//        ":framework:compose:kodein-di-framework-compose"
+//)

@@ -2,8 +2,8 @@ package org.kodein.di
 
 import org.kodein.type.TypeToken
 
-@JvmInline
-public value class Named(public val di: DIAware) {
+@Suppress("INLINE_CLASS_DEPRECATED")
+public inline class Named(public val di: DIAware) {
     /**
      * Gets a factory of [T] for the given argument type and return type.
      * The name of the receiving property is used as tag.
