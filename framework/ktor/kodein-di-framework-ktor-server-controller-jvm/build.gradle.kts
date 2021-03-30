@@ -1,4 +1,4 @@
-val ktorVersion = "1.4.2"
+val ktorVersion = "1.5.2"
 val logbackVersion = "1.2.3"
 
 plugins {
@@ -16,6 +16,7 @@ dependencies {
             
     implementation(ktor())
     implementation(ktor("-server-core"))
+    implementation("org.jetbrains.kotlin:kotlin-reflect:${kodeinVersions.kotlin}") // TODO remove with Ktor built on 1.5
     implementation(kotlin("stdlib-jdk8"))
     testImplementation(ktor("-server-tests"))
 }
