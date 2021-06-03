@@ -2,6 +2,7 @@ package org.kodein.di.internal
 
 import org.kodein.di.*
 import org.kodein.di.bindings.*
+import org.kodein.di.utils.ensureNeverFrozen
 import org.kodein.type.TypeToken
 
 
@@ -40,6 +41,8 @@ internal class DITreeImpl(
     private val translators = ArrayList(registeredTranslators)
 
     init {
+        _cache.ensureNeverFrozen()
+        
         map.forEach { (key, bindings) ->
             val definitions = bindings.map {
                 when (it) {
