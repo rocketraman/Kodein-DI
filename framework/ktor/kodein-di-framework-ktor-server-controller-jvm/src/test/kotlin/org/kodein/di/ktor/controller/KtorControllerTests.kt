@@ -1,7 +1,7 @@
 package org.kodein.di.ktor.controller
 
-import io.ktor.application.*
 import io.ktor.http.*
+import io.ktor.server.application.*
 import io.ktor.server.testing.*
 import org.junit.*
 import org.junit.Test
